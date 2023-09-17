@@ -13,7 +13,6 @@ class Edge{
   ~Edge() {};
 
   HalfEdge *&halfedge(int i) { return m_halfedge[i]; };
-  //Vertex   *&vertex(int i)   { return m_vertices[i]; };
    
  private:
   HalfEdge *m_halfedge[2];
@@ -22,7 +21,6 @@ class Edge{
 
 class EdgeKey {
  public:
-  //~EdgeKey() {};
   EdgeKey(Vertex *v1, Vertex *v2);
   bool operator<(const EdgeKey & key) const ;
   bool operator==(const EdgeKey & key) const;

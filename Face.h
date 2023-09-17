@@ -1,7 +1,5 @@
 #ifndef FACE_H
 #define FACE_H
-//#pragma once
-//class Vector3D;
 #include "Vector3D.h"
 #include "HalfEdge.h"
 
@@ -11,7 +9,6 @@ class Face{
 
   public:
 
-   //return it as reference means we cant get id of const Face   
    int &id(){return m_id;}
 
    HalfEdge *&halfedge() { return m_halfedge; };

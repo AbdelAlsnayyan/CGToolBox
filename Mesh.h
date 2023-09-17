@@ -1,17 +1,11 @@
 #include <vector>
 #include <map>
 #include <iterator>
-//#include "Face.h"
-//#include "Vertex.h"
 #include "HalfEdge.h"
 
 class Mesh{
 
  public:
-  //using   std::vector<Vertex>::const_iterator   VertexCIter;
-  //using   std::vector<Edge>::const_iterator     EdgeCIter;
-  //typedef   std::vector<Face>::iterator     FaceCIter;
-  //using   std::vector<Halfedge>::const_iterator HalfedgeCIter;
 
   int read_obj(int a);
 

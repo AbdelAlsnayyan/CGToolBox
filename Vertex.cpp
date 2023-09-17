@@ -1,10 +1,4 @@
 #include "Vertex.h"
-//#include "Point.h"
-
-//Point &Vertex::point() { return m_point; };
-
-//int Vertex::get_valence() { return m_valence; };
-
 
 void Vertex::one_ring(){
  
@@ -21,9 +15,4 @@ void Vertex::one_ring(){
     while( h != halfedge() );
     set_valence() = i;
 }
-
-
-//void Vertex::please_work(){
-// std::cout << " KAK  " << std::endl;
-// }
 

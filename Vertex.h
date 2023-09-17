@@ -15,6 +15,7 @@ class Vertex{
   int get_valence() const {return m_valence;};
   int &set_valence() {return m_valence;};
   void one_ring();
+  void two_ring();
   Vector3D & point() { return m_point; };
 
   HalfEdge *& halfedge() { return m_halfedge; };
