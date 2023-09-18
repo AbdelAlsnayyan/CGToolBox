@@ -3,9 +3,11 @@
 
 #include <cstddef>
 
-class HalfEdge;
-class Vertex;
+
+namespace CG{
  
+class Vertex;
+class HalfEdge;
 class Edge{
 
  public:
@@ -13,9 +15,11 @@ class Edge{
   ~Edge() {};
 
   HalfEdge *&halfedge(int i) { return m_halfedge[i]; };
+  double &length(){return m_length;};
    
  private:
   HalfEdge *m_halfedge[2];
+  double m_length;
 
 };
 
@@ -28,4 +32,6 @@ class EdgeKey {
  private:
   Vertex *m_vertices[2];
 };
+
+}
 #endif

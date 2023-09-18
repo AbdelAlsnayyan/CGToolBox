@@ -5,8 +5,10 @@
 #include "Vertex.h"
 #include "Edge.h"
 
-class Face;
 
+namespace CG{
+
+class Face;
 class HalfEdge{
 
  public: 
@@ -32,5 +34,7 @@ class HalfEdge{
   Edge *m_edge;
 
 };
+
+}
 
 #endif

@@ -5,6 +5,8 @@
 #include <cmath>
 #include <ostream>
 
+namespace CG{
+
 class Vector3D {
 
  public:
@@ -13,7 +15,7 @@ class Vector3D {
   Vector3D(double x_in, double y_in, double z_in) : x(x_in), y(y_in), z(z_in) {};
   Vector3D() { x = y = z = 0; };
 
-// returns reference to the specified component (0-based indexing: x, y, z)
+// returns x, y, z
   inline double& operator[] ( const int& index ) {
     return ( &x )[ index ];
   }
@@ -40,8 +42,6 @@ class Vector3D {
                    this->x*v.y - this->y*v.x );
  }
 
-
-
  // cross product
  inline Vector3D cross( const Vector3D& u, const Vector3D& v ) {
    return Vector3D( u.y*v.z - u.z*v.y,
@@ -49,32 +49,29 @@ class Vector3D {
                    u.x*v.y - u.y*v.x );
  }
 
+// 2 norm
   inline double norm2( void ) const {
     return sqrt( x*x + y*y + z*z );
   }
 
-  /**
-   * Returns unit vector.
-   */
+   // unit vector.
 inline Vector3D unit( void ) const {
     double rNorm = 1. / sqrt( x*x + y*y + z*z );
     return Vector3D( rNorm*x, rNorm*y, rNorm*z );
   }
 
-// std::ostream& operator<<( std::ostream& os, const Vector3D& v ) {
-//    os << "{ " << v.x << ", " << v.y << ", " << v.z << " }";
-//    return os;
- // }
+  // right scalar multiplication
+  inline Vector3D operator*( const double& c ) const {
+    return Vector3D( x * c, y * c, z * c );
+  }
+
 
  private:
-  // how is this store in memory?
   double x;
   double y;
   double z;
 
-
-
-
 };
 
+}
 #endif
