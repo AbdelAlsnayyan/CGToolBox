@@ -17,11 +17,6 @@ oldMesh->area();
 std::cout << "--> Compute two ring neighborhood..." << std::endl;
 oldMesh->create_2ring_neighborhood();
 
-//BEM::GaussLegendreRule<9> Int_Order;
-//std::cout << Int_Order.xi_int[1] << std::endl;
-BEM::MassMatrix MM(*oldMesh);
-
-
 return 0;
 
 };
